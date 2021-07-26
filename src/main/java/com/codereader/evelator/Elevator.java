@@ -43,6 +43,7 @@ public class Elevator {
 
 
 
+    //TODO why this method static?
     private static void sendMessage(String message) {
 
         System.out.println(LocalDateTime.now().format(DateTimeFormatter.ISO_LOCAL_TIME) + " " + message);
@@ -129,6 +130,8 @@ public class Elevator {
 
             } catch (InterruptedException e) {
 
+// TODO      just printing a stacktrace is never a good practice (even though sometimes you'll have to do it).
+// TODO      try either to handle the exception properly, or wrap it into your custom exception and pass it upstairs, then catch and handle it there
                 e.printStackTrace();
 
             }

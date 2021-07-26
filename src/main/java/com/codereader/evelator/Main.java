@@ -29,6 +29,7 @@ public class Main {
         double floorVelocity = scanner.nextDouble();
 
         System.out.println("input floor doors time (seconds): ");
+//        TODO what is 1000? use named constant for it
         long waitingInterval = scanner.nextLong() * 1000;
 
         long floorTime = (long) (1000.0 * floorHeight / floorVelocity);
@@ -60,6 +61,7 @@ public class Main {
                     elevator.buttonPressedForFloor(nextFloor);
 
                 }
+//                TODO try to avoid catching all Exceptions. Maybe, you need NumberFormatException here, or something like that?
             } catch (Exception e) {
 
                 System.out.println(line + " not a number");
